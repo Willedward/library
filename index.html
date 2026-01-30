@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = 'style.css'>
+</head>
+<body>
+    <div class="modal-overlay">
+        <dialog id = "form">
+            
+            <h2>Enter Book Information: </h2>
+                <form method = "dialog">
+                    <div class="form-title" id = "qn">
+                        <label for = "title-box" required>
+                            Title: 
+                        </label>
+                        <input type = "text" id = "title-box" required>
+                    </div>
+                    <div class="form-author" id = "qn">
+                        <label for = "author-box" required>
+                            Author:
+                        </label>
+                        <input type = 'text' id = 'author-box' required>
+                    </div>
+                    <div class="form-pages" id = "qn">
+                        <label for = "pages-box" required>
+                            Pages:
+                        </label>
+                        <input type = "text" id = "pages-box" required>
+                    </div>
+                    <div class="isread">
+                        <label for="checklist">
+                            Read: 
+                            
+                        </label>
+                        <input type = "checkbox" id  ="checklist" >
+                    </div>
+                    <button type = "submit" id = "submit">Add Book</button>
+                    <button type = "cancel" id = "cancel" formnovalidate>Cancel</button>
+                </form>
+            </dialog>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-title">Welcome to The Library</div>
+            <button class = "addbutton">+ Book</button>
+        </div>
+        
+        <div class="content">
+            
+        </div>
+    </div>
+
+
+    <script src = "javascript.js"></script>
+</body>
+</html>

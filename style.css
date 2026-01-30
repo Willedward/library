@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    display:grid;
+    grid-template-rows: 1fr 6fr;
+
+}
+
+.header{
+    grid-row:1/2;
+    background-color:rgb(161, 161, 161);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:15px;
+    padding-left:40px;
+    padding-right:40px;
+}
+.header-title{
+    font-size:32px;
+    letter-spacing:1px;
+    font-weight:600;
+}   
+
+button{
+    padding:10px;
+    font-size:18px;
+    font-weight:500;
+    background-color:rgb(180, 255, 189);
+    border-radius:8px;
+}
+
+.content{
+    padding:30px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.card{
+    padding:20px;
+    background-color:antiquewhite;
+    margin:2%;
+    height:150px;
+    width:200px;
+}
+
+.modal-overlay{
+    top : 0;
+    left: 0;
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog{
+    margin:auto;
+    inset:0;
+    position:absolute;
+    border: none;
+}
+form{
+    padding: 15px;
+}
+
+#qn{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.isread{
+    display:flex;
+    align-items: center;
+}
+.active{
+    background-color: rgb(147, 255, 255);
+    
+}
