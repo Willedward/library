@@ -52,6 +52,12 @@ form.addEventListener('submit', (e) =>{
     displaybooks();
 })
 
+const cancelbutton = document.querySelector('#cancel');
+cancelbutton.addEventListener('click', (e)=>{
+    form.reset();
+    openmodal.close();
+})
+
 const content = document.querySelector('.content');
 
 
@@ -90,7 +96,9 @@ function displaybooks(){
         buttonremove.classList.add('remove');
         buttonread.classList.add('read');
         buttonremove.textContent = "Remove";
-        buttonread.textContent = "Mark as read";
+        if(current_book.read == false){
+            buttonread.textContent = "Mark read";}
+        else{buttonread.textContent = "Mark unread";}
         //let card_buttons = document.createElement('div')
         card_buttons.classList.add('book-buttons');
         
@@ -130,8 +138,9 @@ content.addEventListener('click', (e)=>{
         for(let i  = 0; i < mylib.length; i++){
             if(mylib[i].id == card.dataset.id){
                 if(mylib[i].read == false){
+                    console.log(e.target.textContent);
                     mylib[i].read = true;
-                }else mylib[i].read = false;
+                }else{ mylib[i].read = false;}
                 break;
             }
         }
